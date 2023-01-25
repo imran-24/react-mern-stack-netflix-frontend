@@ -59,7 +59,7 @@ export const remove = createAsyncThunk('auth/remove', async(data, thunkAPI) => {
     }
 })
 
-export const getSaved = createAsyncThunk('auth/add', async(data, thunkAPI) => {
+export const getSaved = createAsyncThunk('auth/getSaved', async(data, thunkAPI) => {
     try{
         const token = thunkAPI.getState().auth.user.token;
         return await authService.getSaved(data, token);
@@ -132,6 +132,22 @@ export const authSlice = createSlice({
             state.saved = action.payload
         })
         .addCase(getSaved.rejected, (state, action) => {
+            state.isLoading= false;
+            state.isError= true;
+            state.message= action.payload
+            
+        })
+
+        .addCase(add.pending, (state) => {
+            state.isLoading = true;
+
+        })
+        .addCase(add.fulfilled, (state, action) => {
+            state.isLoading = false
+            state.isSuccess = true
+            state.saved.push(action.payload)
+        })
+        .addCase(add.rejected, (state, action) => {
             state.isLoading= false;
             state.isError= true;
             state.message= action.payload

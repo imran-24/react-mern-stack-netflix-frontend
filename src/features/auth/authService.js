@@ -63,7 +63,6 @@ const getSaved = async(data, token)=>{
     }
     
     const response = await axios.get(`${API_URl}/api/users/saved/${data.id}`, config);  
-
     return response.data;
 }
 
