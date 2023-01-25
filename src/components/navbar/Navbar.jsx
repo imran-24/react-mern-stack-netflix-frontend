@@ -15,6 +15,8 @@ const Navbar = () => {
     setScroll(window.pageYOffset === 0 ? false : true )
     
   }
+
+  
   return (
     <nav className={`${scroll ? 'nav__container scroll' : 'nav__container'} `}>
       
@@ -23,7 +25,7 @@ const Navbar = () => {
         <img className='nav__logo'  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1198px-Netflix_2015_logo.svg.png?20190206123158" alt="" />
       </div>
       <ul className='nav__links'>
-        <Link to={'/'}>
+         <Link to={'/'}>
           <li className='nav__link'>home</li>
          </Link>
          <Link to={'/tv'}>

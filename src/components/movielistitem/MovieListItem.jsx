@@ -61,7 +61,7 @@ const MovieListItem = ({movie, isLargeImage, alreadySaved }) => {
     }}>
         <img className={`${isLargeImage ? 'movie__posterLagre' : 'movie__poster'}`} src={`https://image.tmdb.org/t/p/original/.${isLargeImage ? movie?.poster_path : movie?.backdrop_path}`} alt="" />
         {
-            hover && <video className='movie__video' src={video} autoPlay loop  controls muted></video>
+            hover && <video className='movie__video' src={video} autoPlay muted></video>
             
         }
         <div  className='movie__info'>

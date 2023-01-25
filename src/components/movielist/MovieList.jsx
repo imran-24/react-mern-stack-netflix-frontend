@@ -10,8 +10,7 @@ const MovieList = ({title, movies, isLargeImage}) => {
     
   return (
     <div className='movielist__container'>
-        <h1>continue to watch {title}</h1>
-        
+        <p>continue to watch {title}</p>
         <div className='movielist__items'>
           {
             movies?.map(movie => (

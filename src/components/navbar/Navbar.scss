@@ -1,5 +1,6 @@
 .nav__container{
     width: 100%;
+    height: 4rem;
     color: white;
     padding: 20px;
     display: flex;
@@ -9,8 +10,12 @@
     position: fixed;
     top: 0;
     z-index: 9999;
+    background-color: transparent;
     &.scroll{
-        background-color: #0b0b0b;
+        background-color: black;
+        transition: all;
+        animation-duration: 200ms;
+        animation: ease-in-out;
     }
 }
 
@@ -32,6 +37,7 @@
             list-style-type: none;
             text-transform: capitalize;
             font-weight: 300;
+            background-color: transparent;
             a{
                 text-decoration: none;
             }
@@ -44,6 +50,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    padding-right: 10px;
     p{
         font-weight: 300;
     }
