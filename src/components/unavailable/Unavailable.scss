@@ -1,0 +1,16 @@
+.unavailable__container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    
+    h2{
+        margin-top: 10rem;
+        color: white;
+        font-size: 32px;
+        font-weight: 200;
+
+    }
+}

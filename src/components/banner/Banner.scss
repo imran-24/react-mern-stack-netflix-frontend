@@ -1,0 +1,129 @@
+.banner__container{
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+    object-fit: contain;
+    
+    .banner_img{
+        width: 100vw;
+        height: 90vh;
+        object-fit:cover;
+        object-position: center;
+    }
+    
+    .banner__info{
+        display: flex;
+        padding-left: 40px ;
+        
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+
+        
+
+
+        .information{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          
+            .title{
+                font-size: 3rem;
+                font-weight: 800;
+                margin: 0;
+                color: white;
+                
+            }
+            .overview{
+                width: 45rem;
+                line-height: 1.3;
+                color: white;
+                max-width: 420px;
+                height: 80px;
+            }
+            .banner__buttons{
+                display: flex;
+                gap: 10px;
+                font-size: 14px;
+                width: 200px;
+                .play__btn{
+                   font-weight: 500;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   gap: 2px;
+                   width: 100px !important;
+                   padding: 5px 16px !important;
+                   border-radius: 2px;
+                   background-color: white; 
+                   &:hover{
+                        opacity: 80%;
+                   }
+
+                }
+                .info__btn{
+                   font-weight: 500;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   gap: 2px;
+                   width: 100px !important;
+                   padding: 5px 16px !important;
+                   border-radius: 2px;
+                   background-color: rgb(150, 147, 147); 
+                   color: white;
+                   &:hover{
+                    opacity: 80%;
+                   }
+                }
+            }
+            
+        }    
+    }
+    .bottom__fade{
+       
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        height: 7.5rem;
+        background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, .61), #111);
+    }
+
+
+    // @media only screen and (max-width: 900px) {
+    //     .banner__info{
+    //         width: 60%;
+    //         .information{
+          
+    //             h2{
+    //                 font-size: 30px !important;
+    //                 font-weight: 500;
+    //                 color: white;
+    //             }
+    //             p{
+    //                 font-size: 12px;
+    //                 color: white;
+    //             }
+    //             .banner__buttons{ 
+    //                 font-size: 12px;
+    //                 .play__btn{  
+    //                     padding: 0;
+    //                     width: 70px;    
+    //                 }
+    //                 .info__btn{ 
+    //                     width: 70px;                            
+    //                 }
+    //             }
+                
+    //         }
+    //       }
+    //     }
+        
+    
+}
+
+
+

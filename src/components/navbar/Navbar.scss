@@ -1,0 +1,94 @@
+.nav__container{
+    width: 100%;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    &.scroll{
+        background-color: #0b0b0b;
+    }
+}
+
+.nav__logo{
+    height: 30px;
+}
+
+.nav__container__left{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .nav__links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+        .nav__link{
+            list-style-type: none;
+            text-transform: capitalize;
+            font-weight: 300;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+
+.nav__container__right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    p{
+        font-weight: 300;
+    }
+}
+
+.nav__profileicon{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    
+    position: relative;
+    cursor: pointer;
+}
+
+.more__options{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    
+    .options{
+        position: absolute;
+        right: 10px;
+        margin-top: 20px;
+        display: none;
+        font-weight: 300;
+        font-size: 13px;
+        background-color:black;
+        padding: 10px;
+        border-radius: 5px;
+        span{
+            &:hover{
+                cursor: pointer;
+                color: gray;
+            }
+        }
+    }
+    &:hover> .options{
+        animation: ease-out;
+        transition: all;
+        animation-duration: 200ms;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        
+        
+        }
+}
+
