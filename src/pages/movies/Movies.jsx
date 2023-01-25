@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import Banner from '../../components/banner/Banner'
 import Unavailable from '../../components/unavailable/Unavailable'
 import Dropdown from '../../components/dropdown/Dropdown'
@@ -16,10 +16,11 @@ const Movies = () => {
     const {genres} = useSelector((state) => state.netflix);
     const [genre, setGenre] = useState(28);
     const type = useParams();
+    const navigate = useNavigate();
     const {movies} = useSelector(state => state.netflix);
     useEffect(()=>{
       dispatch(getGenres())
-    },[])
+    },[navigate])
     useEffect(()=>{
       if(genresLoaded) dispatch(fetchMoviesByGenre({genre, type : type?.type }))
     },[genres, genre])

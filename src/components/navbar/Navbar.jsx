@@ -5,7 +5,7 @@ import {IoIosNotifications} from 'react-icons/io'
 import {IoMdArrowDropdown} from 'react-icons/io'
 import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../../features/auth/authSlice'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 const Navbar = () => {
   const [scroll, setScroll] = useState(0);
   const {user} = useSelector((state) => state.auth);
@@ -23,10 +23,18 @@ const Navbar = () => {
         <img className='nav__logo'  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1198px-Netflix_2015_logo.svg.png?20190206123158" alt="" />
       </div>
       <ul className='nav__links'>
-         <li className='nav__link'><a href="/">Home</a></li>
-         <li className='nav__link'><a href="tv">series</a></li>
-         <li className='nav__link'><a href="/movie">movies</a></li>
-         <li className='nav__link'><a href="/mylist">my list</a></li>
+        <Link to={'/'}>
+          <li className='nav__link'>home</li>
+         </Link>
+         <Link to={'/tv'}>
+          <li className='nav__link'>Series</li>
+         </Link>
+         <Link to={'/movie'}>
+          <li className='nav__link'>movies</li>
+         </Link>
+         <Link to={'/mylist'}>
+          <li className='nav__link'>MyList</li>
+         </Link>
       </ul>
 
       </div>

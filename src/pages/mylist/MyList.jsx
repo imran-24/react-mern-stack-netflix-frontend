@@ -2,7 +2,7 @@ import React from 'react'
 import '../mylist/MyList.scss'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import Unavailable from '../../components/unavailable/Unavailable'
 import Navbar from '../../components/navbar/Navbar'
 import { useEffect } from 'react'
@@ -12,6 +12,7 @@ import MovieListItem from '../../components/movielistitem/MovieListItem'
 
 
 const MyList = () => {
+  const navigate = useNavigate();
   const {user, saved} = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   
@@ -22,7 +23,7 @@ const MyList = () => {
             id: user?._id
         }))
     }
-  },[user]) 
+  },[user, navigate]) 
   
   return (
     <div className='home__container'>
