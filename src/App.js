@@ -41,12 +41,13 @@ function App() {
     <div className="app_container">
 
           {
-            !user ?
-                <Routes>
-                    <Route path="/login" element={ <Login /> } />
-                    <Route path="/signup" element={ <SignUp /> } />
-                </Routes>
-             : <Routes>
+            // !user ?
+            //     <Routes>
+            //         <Route path="/login" element={ <Login /> } />
+            //         <Route path="/signup" element={ <SignUp /> } />
+            //     </Routes>
+            //  :
+              <Routes>
                 <Route path="/" element={ <Home /> } />
                 <Route path="/:type" element={ <Movies /> } />
                 <Route path="/watch" element={ <Watch /> } />
