@@ -49,7 +49,7 @@ const Banner = () => {
             } */}
             <div className='information'>
                 
-                <h1 className='title'>{banner?.original_name   }</h1>
+                <h1 className='title'>{banner?.original_name  }</h1>
                 <div className='banner__buttons'>
                     <button className='play__btn'>
                         <BsFillPlayFill fontSize={24} />
