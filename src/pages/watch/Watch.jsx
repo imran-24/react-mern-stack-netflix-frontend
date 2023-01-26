@@ -7,8 +7,8 @@ const Watch = () => {
   const navigate = useNavigate();
   return (
     <div className='watch__container'>
-        <div className='back__btn'>
-          <BsArrowLeft fontSize={32} onClick={()=> navigate(-1)} />
+        <div onClick={()=> navigate(-1)} className='back__btn'>
+          <BsArrowLeft fontSize={26}  />
         </div>
         <video className='video' src={video} autoPlay loop controls muted></video>
     </div>
