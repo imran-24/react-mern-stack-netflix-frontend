@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { signup } from '../../features/auth/authSlice';
 import '../signup/SignUp.scss'
-import {netflix} from '../../assets/Netflix.png'
+import netflix from '../../assets/Netflix.png'
 const SignUp = () => {
   const dispatch = useDispatch();
   const {user} = useSelector((state) => state.auth);

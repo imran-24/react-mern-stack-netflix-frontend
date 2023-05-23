@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import Navbar from '../../components/navbar/Navbar'
 import { signup, signin } from '../../features/auth/authSlice'
-import {netflix} from '../../assets/Netflix.png'
+import netflix from '../../assets/Netflix.png'
 import '../login/Login.scss'
 const Login = () => {
   const dispatch = useDispatch();

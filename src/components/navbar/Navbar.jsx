@@ -6,8 +6,8 @@ import {IoMdArrowDropdown} from 'react-icons/io'
 import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../../features/auth/authSlice'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
-import {netflix} from '../../assets/Netflix.png'
-import {profile} from '../../assets/profile.png'
+import netflix from '../../assets/Netflix.png'
+import profile from '../../assets/profile.png'
 const Navbar = () => {
   const [scroll, setScroll] = useState(0);
   const {user} = useSelector((state) => state.auth);
