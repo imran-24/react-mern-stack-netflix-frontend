@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { signup } from '../../features/auth/authSlice';
 import '../signup/SignUp.scss'
+import {netflix} from '../../assets/Netflix.png'
 const SignUp = () => {
   const dispatch = useDispatch();
   const {user} = useSelector((state) => state.auth);
@@ -42,7 +43,7 @@ const {username, email, password, imageUrl} = formData;
   return (
     <div className='login__container'>
         <div className='nav__container'>    
-            <img className='nav__logo'  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1198px-Netflix_2015_logo.svg.png?20190206123158" alt="" />
+            <img className='nav__logo'  src={netflix} alt="" />
             <Link to={'/login'}>
             <p className='signup__btn'>Log In</p>
             </Link>

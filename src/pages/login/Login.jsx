@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import Navbar from '../../components/navbar/Navbar'
 import { signup, signin } from '../../features/auth/authSlice'
+import {netflix} from '../../assets/Netflix.png'
 import '../login/Login.scss'
 const Login = () => {
   const dispatch = useDispatch();
@@ -34,7 +35,7 @@ const {email, password} = formData;
   return (
     <div className='login__container'>
         <div className='nav__container'>    
-            <img className='nav__logo'  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1198px-Netflix_2015_logo.svg.png?20190206123158" alt="" />
+            <img className='nav__logo'  src={netflix} alt="" />
             <Link to={'/signup'}>
             <p className='signup__btn'>sign up</p>
             </Link>
